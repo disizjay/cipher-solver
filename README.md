@@ -1,1 +1,3 @@
 # cipher-solver
+
+Encrypt & Decrypt

@@ -167,8 +167,6 @@ def main():
 
 if __name__ == "__main__":
     try:
-        #import cProfile
-        #cProfile.run('main()')
         main()
     except Exception as E:
         print("Error: %s" % E)

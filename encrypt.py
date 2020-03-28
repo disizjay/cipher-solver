@@ -13,7 +13,7 @@ text = open('plaintext_read.txt').read().lower()
 
 trans = string.maketrans(abc, key)
 
-f = open("plainencrypted.txt", "a")
+f = open("encrypted.txt", "a")
 f.write(text.translate(trans))
 f.close()
 

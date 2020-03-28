@@ -9,8 +9,8 @@ try:
 except ImportError:
     maketrans = str.maketrans
 
-MAX_GOODNESS_LEVEL = 2  # 1-7
-MAX_BAD_WORDS_RATE = 0.06
+MAX_GOODNESS_LEVEL = 3  # 1-7
+MAX_BAD_WORDS_RATE = 0.05 # 0.0 - 1.0
 
 ABC = "abcdefghijklmnopqrstuvwxyz"
 
@@ -19,9 +19,6 @@ class WordList:
     MAX_WORD_LENGTH_TO_CACHE = 8
 
     def __init__(self):
-        # words struct is
-        # {(length,different_chars)}=[words] if len > MAX_WORD_LENGTH_TO_CACHE
-        # {(length,different_chars)}=set([words and templates]) else
 
         self.words = {}
         for goodness in range(MAX_GOODNESS_LEVEL):
